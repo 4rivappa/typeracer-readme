@@ -93,8 +93,11 @@ def main():
     plt.xlabel("race number")
     plt.ylabel("wpm")
     plt.title("Typeracer WPM over time")
+    
+    if not os.path.exists('graphs'):
+        os.makedirs('graphs')
 
-    plt.savefig('light_graph.png', dpi=custom_dpi, bbox_inches='tight')
+    plt.savefig('./graphs/light_graph.png', dpi=custom_dpi, bbox_inches='tight')
 
     plt.clf()
     plt.style.use('dark_background')
@@ -103,7 +106,7 @@ def main():
     plt.ylabel("wpm")
     plt.title("Typeracer WPM over time")
 
-    plt.savefig('dark_graph.png', dpi=custom_dpi, bbox_inches='tight')
+    plt.savefig('./graphs/dark_graph.png', dpi=custom_dpi, bbox_inches='tight')
     return
 
 if __name__ == "__main__":
