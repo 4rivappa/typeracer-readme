@@ -41,7 +41,9 @@ def generate_data(username, start_date_input):
             end_date = int(curr_data[-1]["t"])
         else:
             break
-    with open('data.json', 'w') as file:
+    if not os.path.exists('exports'):
+        os.makedirs('exports')
+    with open('./exports/data.json', 'w') as file:
         json.dump(data, file, indent=4)
     return data
 
@@ -97,10 +99,10 @@ def main():
     plt.ylabel("wpm")
     # plt.title("Typeracer WPM over time")
     
-    if not os.path.exists('graphs'):
-        os.makedirs('graphs')
+    if not os.path.exists('exports'):
+        os.makedirs('exports')
 
-    plt.savefig('./graphs/light_graph.png', dpi=custom_dpi, bbox_inches='tight')
+    plt.savefig('./exports/light_graph.png', dpi=custom_dpi, bbox_inches='tight')
 
     plt.clf()
     plt.style.use('dark_background')
@@ -109,7 +111,7 @@ def main():
     plt.ylabel("wpm")
     # plt.title("Typeracer WPM over time")
 
-    plt.savefig('./graphs/dark_graph.png', dpi=custom_dpi, bbox_inches='tight')
+    plt.savefig('./exports/dark_graph.png', dpi=custom_dpi, bbox_inches='tight')
     return
 
 if __name__ == "__main__":

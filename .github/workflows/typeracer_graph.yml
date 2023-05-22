@@ -24,13 +24,13 @@ jobs:
 
       - name: Running script
         run: |
-          mkdir graphs
+          mkdir exports
           python script.py
           
       - name: push graphs to typeracer-readme branch
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           target_branch: typeracer-readme
-          build_dir: graphs
+          build_dir: exports
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
