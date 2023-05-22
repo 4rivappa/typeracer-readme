@@ -89,11 +89,13 @@ def main():
 
         x_averages = np.append(x_averages, x_remaining.mean())
         y_averages = np.append(y_averages, y_remaining.mean())
-
+    
+    plt.figure(figsize=(4, 2), dpi=custom_dpi)
+    
     plt.plot(x_averages, y_averages)
     plt.xlabel("race number")
     plt.ylabel("wpm")
-    plt.title("Typeracer WPM over time")
+#     plt.title("Typeracer WPM over time")
     
     if not os.path.exists('graphs'):
         os.makedirs('graphs')
