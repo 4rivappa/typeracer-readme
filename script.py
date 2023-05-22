@@ -95,7 +95,7 @@ def main():
     plt.plot(x_averages, y_averages)
     plt.xlabel("race number")
     plt.ylabel("wpm")
-#     plt.title("Typeracer WPM over time")
+    # plt.title("Typeracer WPM over time")
     
     if not os.path.exists('graphs'):
         os.makedirs('graphs')
@@ -107,7 +107,7 @@ def main():
     plt.plot(x_averages, y_averages)
     plt.xlabel("race number")
     plt.ylabel("wpm")
-    plt.title("Typeracer WPM over time")
+    # plt.title("Typeracer WPM over time")
 
     plt.savefig('./graphs/dark_graph.png', dpi=custom_dpi, bbox_inches='tight')
     return
