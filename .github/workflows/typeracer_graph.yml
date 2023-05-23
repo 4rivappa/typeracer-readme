@@ -27,7 +27,7 @@ jobs:
           mkdir exports
           python script.py
           
-      - name: push graphs to typeracer-readme branch
+      - name: push exports to typeracer-readme branch
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           target_branch: typeracer-readme

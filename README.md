@@ -21,7 +21,7 @@ typeracer-readme generates typeracer graph for profile readme
   
   1000 at a time, looping until it gets all racing data
   
-  generate two theme graphs (light and dark) images
+  generate two theme graphs (light and dark) images, and data.json file
 
 # setup workflow
   copy script.py and requirements.txt into root directory of your repo
